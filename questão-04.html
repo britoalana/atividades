@@ -1,0 +1,43 @@
+<!-- Faça uma função que leia cinco valores inteiros, com uma estrutura de repetição,
+determine e mostre o maior e o menor deles. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function maiorMenor() {
+            let maior = Number.MIN_SAFE_INTEGER
+            let menor = Number.MAX_SAFE_INTEGER
+            let num
+
+            for (let i = 1; i <= 5; i++) {
+                num = parseInt(prompt(`Digite o ${i} número`))
+                if (num > maior) {
+                    maior = num
+                } if (num < menor) {
+                    menor = num
+                }
+            }
+
+
+            console.log(`O maior número é ${maior} e o menor é ${menor}`)
+        }
+        maiorMenor()
+      // o Number.MIN_SAFE_INTEGER serve para mostrar o menor número inteiro e o Number.MAX_SAFE_INTEGER mostra o maior.
+      //o for (estrutura de repetição) usei para a mensagem apacer no prompt enquanto o número de repetição for igual a 1 e menor ou igual a 5
+      //já que eram necessários 5 números. Nas condições, se o número fosse maior que o Number.MIN_SAFE_INTEGER(menor número inteiro),
+      //pois igualei a palavra maior a essa constante, ele seria mostrado como o maior número, e caso o número fosse menor que Number.MAX_SAFE_INTEGER
+      //(maior número inteiro) ele seria mostrado como o menor número.
+
+
+    </script>
+</body>
+
+</html>

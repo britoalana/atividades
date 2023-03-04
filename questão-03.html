@@ -1,0 +1,52 @@
+<!-- Crie uma função que receba como parâmetro a hora de início e a hora de término
+de um jogo, ambas subdivididas em dois valores distintos: horas e minutos. A função
+deverá retornar a duração expressa em minutos, considerando que o tempo máximo
+de um jogo é de 24 horas e que ele pode começar em um dia e terminar no outro. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function duracaoJogo(horaInicio, minutoInicio, horaTermino, minutoTermino,  duracao, duracao1) {
+          horaInicio =prompt("Digite a hora de início do jogo")
+          minutoInicio =prompt("Digite a minuto de início do jogo")
+          horaTermino =prompt("Digite a hora de término do jogo")
+          minutoTermino = prompt("Digite o minuto de término do jogo")
+      
+        
+          
+          let minutosI = horaInicio * 60 + minutoInicio
+          let minutosT = horaTermino * 60 + minutoTermino
+
+          if(minutosI > minutosT){
+            duracao = 24 *60 + minutosT
+            console.log(`O jogo teve duração de ${duracao} minutos`)
+          }else{
+          duracao1 = minutosT - minutosI
+          console.log(`O jogo teve duração de ${duracao1} minutos`)
+          }
+        }        
+
+
+        duracaoJogo()
+        
+            // minutosI serviria para transformar em minutos o número de horas(que possui 60 minutos por isso *60) e minutos (por
+            //isso +) do início do jogo, e o minutoT tranformaria a hora e minuto que o jogo terminou. Se o jogo tivesse 
+            //uma duração maior que 24 horas (o número de minutosI fosse maior que minutosT), calcularia a quantidade de minutos 
+            //existentes em 24 horas (multiplicaria 24 por 60) e somaria com a quantidade de minutos de término. E caso tivesse uma
+            //duração menor que 24 horas, apenas subtraria os minutos do término e o de minutos de início. Porém não funcionou.
+ 
+  
+
+    </script>
+
+</body>
+
+</html>

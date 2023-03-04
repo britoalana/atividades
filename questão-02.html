@@ -1,0 +1,38 @@
+<!-- Faça uma função que receba um único valor representando segundos. Essa função
+deverá convertê-lo para hora, minutos e segundos. Todas as variáveis devem ser
+passadas como parâmetro, não havendo variáveis globais. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function tempo(segundos, horas, resto, minutos, segundo) {
+            segundos = parseInt(prompt("Digite uma quantidade de segundos"))
+            
+
+            horas = parseInt(segundos / 3600)
+            resto = parseInt(segundos % 3600)
+            minutos = parseInt(resto / 60)
+            segundo = parseInt(resto % 60)
+
+            console.log(`${segundos} segundos corresponde á ${horas}: ${minutos}: ${segundo}`)
+        }
+
+        
+        tempo()
+
+        //1 hora possui 3600 segundos, então bastava dividir o valor de segundos por 3600.
+        //o resto seria para receber o valor do resto da divisão anterior
+        //o 
+    </script>
+
+</body>
+
+</html>
